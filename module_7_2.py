@@ -3,7 +3,7 @@ def custom_write(file_name, strings):
     file = open(file_name, 'a', encoding='utf-8')
     for i in range(len(strings)):
         strings_positions[((i+1), file.tell())] = strings[i]
-        file.write(f'\n{strings[i]}')
+        file.write(f'{strings[i]}\n')
     file.close()
     return strings_positions
 
